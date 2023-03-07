@@ -2,7 +2,7 @@ defmodule FizzbuzzWeb.Other do
   use FizzbuzzWeb, :controller
 
   def index(conn, _) do
-    calculator = for n <- 1..100, rem(n, 3) != 0 and rem(n, 5) != 0, do: n
+    calculator = for x <- 1..100, rem(x, 3) != 0 and rem(x, 5) != 0, do: x
     conn
     |> json(%{calculator: calculator})
   end
